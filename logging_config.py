@@ -79,9 +79,9 @@ def _create_session_logger(project_name, session_id, log_level):
     )
     
     # Create session-specific file handler
-    file_handler = logging.FileHandler(log_path, mode='a', encoding='utf-8')
-    file_handler.setLevel(log_level)
-    file_handler.setFormatter(formatter)
+    # file_handler = logging.FileHandler(log_path, mode='a', encoding='utf-8')
+    # file_handler.setLevel(log_level)
+    # file_handler.setFormatter(formatter)
     
     # Create console handler with UTF-8 encoding and error handling for Windows
     console_handler = logging.StreamHandler()
@@ -100,7 +100,7 @@ def _create_session_logger(project_name, session_id, log_level):
             pass  # If it fails, console handler will just skip problematic characters
     
     # Add handlers
-    logger.addHandler(file_handler)
+    # logger.addHandler(file_handler)
     logger.addHandler(console_handler)
     
     return logger
@@ -157,4 +157,5 @@ def log_dict(logger, data_dict, title="Data"):
             str_value = str_value[:200] + "..."
         logger.info(f"│  {key}: {str_value}")
     logger.info(f"└" + "─" * 99)
+
 
