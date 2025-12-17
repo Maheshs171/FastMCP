@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 MCP Server for EVAA Virtual Assistant
-Handles tool calls for appointment booking, RAG retrieval, and URL operations
 """
 
 import json
@@ -196,3 +195,8 @@ def rag_retrieval_tool(query: str, session_id: str = None, bot_id: str = None) -
 
     except Exception as e:
         return f"Error retrieving context from Pinecone: {str(e)}"
+
+
+# Entry point - force stdio transport
+if __name__ == "__main__":
+    mcp.run(transport="stdio")
