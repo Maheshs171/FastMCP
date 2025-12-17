@@ -1,6 +1,7 @@
 fastmcp
-langchain
-pinecone
+langchain==0.1.20
+langchain-core==0.1.52
+langchain-community==0.0.38
+pinecone-client
 requests
-pydantic
-
+pydantic==2.7.0
