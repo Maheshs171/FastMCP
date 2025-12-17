@@ -1,0 +1,5 @@
+fastmcp
+langchain
+pinecone-client
+requests
+pydantic
